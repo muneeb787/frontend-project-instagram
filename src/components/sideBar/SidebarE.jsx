@@ -1,12 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react'
-import { motion } from "framer-motion"
 import "./search.css";
-import "./SideBarE.css";
-import CreatePost from '../Models/createPostModel';
+import "./sidebarE.css";
 import { logout } from '../../redux/authSlice';
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom"
 import { useLocation } from 'react-router-dom';
 import EditProfile from '../Models/editProfileModel';
 const SidebarE = () => {
