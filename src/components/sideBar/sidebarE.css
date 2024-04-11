@@ -1,0 +1,55 @@
+.navActive::before {
+    content: "";
+    height: 60px;
+    width: 7px;
+    background-color: red;
+    position: absolute;
+    border-radius: 0px 10px 10px 0px;
+    background-image: linear-gradient(to top, #FFD600, #FF0100, #D800B9);
+}
+
+.navActive::after {
+    content: "";
+    height: 20px;
+    width: 40px;
+    background-color: red;
+    border-radius: 0px 10px 10px 0px;
+    filter: blur(15px);
+    position: absolute;
+    left: -6px;
+    top: 15px;
+    background-image: linear-gradient(to top, #FFD600, #FF0100, #D800B9);
+}
+.navActiveMob::before {
+    content: "";
+    height: 7px;
+    width: 60px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left: -10px;
+    border-radius: 10px 10px 0px 0px;
+    background-image: linear-gradient(to right, #FFD600, #FF0100, #D800B9);
+}
+
+.navActiveMob::after {
+    content: "";
+    height: 40px;
+    width: 20px;
+    background-color: red;
+    border-radius: 10px 10px 0px 0px;
+    filter: blur(15px);
+    position: absolute;
+    left: 6px;
+    bottom: -10px;
+    background-image: linear-gradient(to right, #FFD600, #FF0100, #D800B9);
+}
+
+/* Adjust the position of the .navActive element as needed */
+
+.element-with-gradient-to-left {
+    background-image: linear-gradient(to left ,#FFD600, #FF0100, #D800B9);
+}
+.element-with-gradient-to-right {
+    background-image: linear-gradient(to right ,#FFD600, #FF0100, #D800B9);
+}

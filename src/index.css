@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    /* font-family: 'Croissant One', cursive; */
+    font-family: 'Roboto', sans-serif;
+}
+
+@layer utilities {
+    @variants responsive {
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    }
+}
+
+@layer base {
+    :root {
+        --color-bkg: #FFFFFF;
+        --color-content: #000000;
+        --color-accent1: #3897F0;
+        --color-accent2: #8E8E8E;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --color-bkg: #121212;
+            --color-content: #FFFFFF;
+            --color-accent1: #3897F0;
+            --color-accent2: #8e8e8e9b;
+        }
+
+        :root[data-theme="dark"] {
+            --color-bkg: #252525;
+            --color-bkg2: #303030;
+            --color-content: #FFFFFF;
+            --color-accent1: #0095f6;
+            --color-accent2: #8e8e8e9b;
+            --color-gradient: linear-gradient(to bottom, #FFD600, #FF0100, #D800B9);
+        }
+
+        :root[data-theme="light"] {
+            --color-bkg: #ffffff;
+            --color-bkg2: #f2f1f1;
+            --color-content: #000000;
+            --color-accent1: #0095f6;
+            --color-accent2: #8e8e8e9b;
+            --color-gradient: linear-gradient(#FFD600, #FF0100, #D800B9);
+        }
+
+        :root[data-theme="funk"] {
+            --color-bkg: #ffffff;
+            --color-content: #000000;
+            --color-accent1: #b7058e;
+            --color-accent2: #8e8e8e9b;
+        }
+    }
+}
+
+.element-with-gradient {
+    background-image: var(--color-gradient);
+}
+.element-with-gradient-to-left {
+    background-image: linear-gradient(to left ,#FFD600, #FF0100, #D800B9);
+}
